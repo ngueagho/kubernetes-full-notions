@@ -145,4 +145,4 @@ La ressource **ReplicationController** est une version plus ancienne remplacée 
 
 Ces cinq tâches couvrent de manière exhaustive les différentes ressources Kubernetes que vous avez listées. En les mettant en œuvre, vous développerez une expertise solide en gestion de clusters Kubernetes, en assurant la sécurité, la scalabilité, la résilience et l'observabilité de vos applications au sein d'un environnement d'entreprise.
 
-N'hésitez pas à me demander des détails supplémentaires sur l'une de ces tâches ou sur la manière de configurer et d'implémenter ces ressources spécifiques dans vos projets DevOps !
+Toutes ces configurations seront faites en utilisant les helm chart de kubernetes .
