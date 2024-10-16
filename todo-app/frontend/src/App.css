@@ -1,0 +1,48 @@
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .add-todo {
+    margin-bottom: 20px;
+  }
+  
+  .add-todo input {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+  }
+  
+  .add-todo button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    text-align: left;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  li.completed span {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  li button {
+    margin-left: auto;
+    padding: 5px 10px;
+  }
+  
