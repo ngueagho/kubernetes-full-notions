@@ -1,4 +1,4 @@
-D'accord, nous allons créer une application complète composée d'un **frontend**, d'un **backend** et d'une **base de données**, le tout conteneurisé avec Docker et orchestré avec Docker Compose. Pour cet exemple, nous allons développer une simple **Todo List**.
+Nous allons créer une application complète composée d'un **frontend**, d'un **backend** et d'une **base de données**, le tout conteneurisé avec Docker et orchestré avec Docker Compose. Pour cet exemple, nous allons développer une simple **Todo List**.
 
 ### **Table des Matières**
 
@@ -814,4 +814,3 @@ Vous avez maintenant une application Todo List complète composée d'un frontend
 3. **CI/CD**
    - Mettez en place des pipelines d'intégration continue et de déploiement continu pour automatiser les tests et le déploiement de l'application.
 
-N'hésitez pas à revenir si vous avez besoin de plus d'assistance ou si vous avez d'autres questions !
