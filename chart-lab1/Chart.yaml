@@ -1,0 +1,5 @@
+apiVersion: v2
+name: deploy-chart
+description: "Déploiement et Gestion d'une Application Multi-Tier avec Sécurité et Scalabilité"
+version: 1.0.0
+appVersion: "1.0"

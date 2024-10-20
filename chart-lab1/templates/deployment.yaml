@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend 
+  labels:
+    app: frontend
+spec:
+  replicas: 3  # Nombre de réplicas de pods
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: container-frontend 
+        image: mon-image:v1  # Remplacez par votre image Docker
+        ports:
+        - containerPort: 80  # Port exposé par le conteneur
+      # Configuration des probes de santé
+      livenessProbe:
+        httpGet:
+          path: /health
+          port: 80
+        initialDelaySeconds: 30
+        periodSeconds: 10
+      readinessProbe:
+        httpGet:
+          path: /ready
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1  # Nombre maximum de pods indisponibles pendant la mise à jour
+      maxSurge: 1        # Nombre maximum de nouveaux pods créés au-dessus du nombre désiré de pods
+
+
+
+
+
+
+
+
+
+
+# Database creation
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: bd-deployment
+ labels:
+   app: bd
+spec:
+ replicas: 3
+ selector:
+   matchLabels:
+     app: bd
+ template:
+   metadata:
+     labels:
+       app: bd
+   spec:
+     containers:
+     - name: bd
+       image: postgres:14
+       env:
+       - name: POSTGRES_USER
+         value: "postgres"
+       - name: POSTGRES_PASSWORD
+         value: "password"
+       - name: POSTGRES_DB
+         value: "todo_db"
+
+
+       ports:
+       - containerPort: 5432
+ strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxUnavailable: 1
